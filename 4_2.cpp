@@ -1,4 +1,5 @@
 // 4.2
+// Test Score: 100%
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -9,18 +10,10 @@ int solution(vector<int> &A) {
 	if(N < 3)
 		return 0;
 	sort(A.begin(), A.end());
-
 	for(size_t i = 0; i < (N - 2); i ++) {
-		long long p = A[i];
-		long long q = A[i + 1];
-		long long r = A[i + 2];
-		long long dif = q - p;
-		if(dif >= p)
-			continue;
-		dif = r - q;
-		if(dif >= q)
-			continue;
-		return 1;
+		long long dif =	A[i+2] - A[i+1];
+		if((A[i] >= 0) && (A[i] > dif))
+			return 1;
 	}
 	return 0;
 }
