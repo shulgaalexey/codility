@@ -1,4 +1,6 @@
-//2.3
+// 2.3
+// MissingInteger
+// Find the minimal positive integer not occurring in a given sequence.
 // Test Score: 100%
 #include <iostream>
 #include <vector>

@@ -1,4 +1,6 @@
 // 3.2
+// PassingCars
+// Count the number of passing cars on the road.
 // Test Score: 100%
 #include <iostream>
 #include <vector>

@@ -1,4 +1,6 @@
 // 1.1
+// TapeEquilibrium
+// Minimize the value |(A[0] + ... + A[P-1]) - (A[P] + ... + A[N-1])|.
 // Test Score: 100%
 
 #include <algorithm>

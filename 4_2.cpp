@@ -1,4 +1,6 @@
 // 4.2
+// Triangle
+// Determine whether a triangle can be built from a given set of edges.
 // Test Score: 100%
 #include <iostream>
 #include <vector>

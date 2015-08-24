@@ -1,4 +1,6 @@
 // 4.3
+// Distinct
+// Compute number of distinct values in an array.
 // Test Score: 100%
 #include <iostream>
 #include <algorithm>

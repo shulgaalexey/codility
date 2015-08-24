@@ -1,4 +1,6 @@
 // 1.2
+// PermMissingElem
+// Find the missing element in a given permutation.
 // Test Score: 100%
 
 #include <iostream>

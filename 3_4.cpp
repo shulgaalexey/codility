@@ -1,4 +1,6 @@
 // 3.4
+// GenomicRangeQuery
+// Find the minimal nucleotide from a range of sequence DNA.
 // Test Score: 100%
 #include <iostream>
 #include <vector>

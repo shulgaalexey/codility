@@ -1,4 +1,6 @@
 // 3.3
+// MinAvgTwoSlice
+// Find the minimal average of any slice containing at least two elements.
 // Test Score: 100%
 #include <iostream>
 #include <vector>

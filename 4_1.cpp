@@ -1,4 +1,6 @@
 // 4.1
+// MaxProductOfThree
+// Maximize A[P] * A[Q] * A[R] for any triplet (P, Q, R).
 // Test Score: 100%
 #include <iostream>
 #include <vector>

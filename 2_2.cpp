@@ -1,4 +1,6 @@
-//2.2
+// 2.2
+// PermCheck
+// Check whether array A is a permutation.
 // Test Score: 100%
 #include <iostream>
 #include <vector>

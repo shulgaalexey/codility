@@ -1,4 +1,6 @@
 // 3.1
+// CountDiv
+// Compute number of integers divisible by k in range [a..b].
 // Test Score: 100%
 #include <iostream>
 #include <math.h>

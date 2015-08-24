@@ -1,4 +1,6 @@
 // 1.3
+// FrogJmp
+// Count minimal number of jumps from position X to Y.
 // Test Score: 100%
 
 #include <math.h>

@@ -1,4 +1,6 @@
 // 2.1
+// FrogRiverOne
+// Find the earliest time when a frog can jump to the other side of a river.
 // Test Score: 100%
 #include <iostream>
 #include <vector>
