@@ -1,6 +1,7 @@
 // 4.4
 // NumberOfDiscIntersections
 // Compute the number of intersections in a sequence of discs.
+// Not my solution, taken from the internet
 // Test Score: 93% (87%/100%)
 #include <iostream>
 #include <algorithm>
