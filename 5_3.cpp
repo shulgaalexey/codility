@@ -1,4 +1,7 @@
 // 5.3
+// Brackets
+// Determine whether a given string of parentheses is properly nested.
+// Test Score: 100%
 #include <iostream>
 #include <string>
 #include <stack>
