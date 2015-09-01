@@ -15,20 +15,24 @@ using namespace std;
 int solution(vector<int> &A) {
 	if(A.size() < 3)
 		return 0;
+
 	const int N = int(A.size());
 
+	/* Calculate the most possible summ, moving left-to-right */
 	vector<int> fromLeft(N);
-	vector<int> fromRight(N);
-        for(int i = 2; i < N; i++) {
+        for(int i = 2; i < N; i++)
             fromLeft[i] = max(0, fromLeft[i - 1] + A[i - 1]);
-        }
-        for(int i = (N - 3); i >= 0; i--) {
-            fromRight[i] = max(0, fromRight[i+1] + A[i+1]);
-        }
+
+	/* Calculate the most possible summ, moving right-to-left */
+	vector<int> fromRight(N);
+        for(int i = (N - 3); i >= 0; i--)
+            fromRight[i] = max(0, fromRight[i + 1] + A[i + 1]);
+
+	/* Calculate the most possible summ of the array */
         int max_slice = 0;
-        for(int i = 1; i < (N - 1); i++) {
+        for(int i = 1; i < (N - 1); i++)
             max_slice = max(max_slice, fromLeft[i] + fromRight[i]);
-        }
+
         return max_slice;
 }
 
@@ -126,7 +130,6 @@ int main(void) {
 		if(r1 != 17)
 			cout << "ERROR1" << endl;
 		int r2 = solution_bf(A);
-		cout << r2 << endl;
 		if(r2 != 17)
 			cout << "ERROR1_bf" << endl;
 	}
