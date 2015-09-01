@@ -17,6 +17,60 @@ int solution(vector<int> &A) {
 		return 0;
 
 	const int N = int(A.size());
+	int stack = 0;
+	int size = 0;
+	for(int i = 0; i < N; i ++) {
+		if(size == 0) {
+			stack = A[i];
+			size = 1;
+		} else {
+			if(stack == A[i]) {
+				size ++;
+			} else {
+				size --;
+			}
+		}
+	}
+
+	if(size == 0)
+		return 0;
+
+	int cnt = 0;
+	for(int i = 0; i < N; i ++)
+		if(A[i] == stack)
+			cnt ++;
+
+	if(cnt < int(N / 2))
+		return 0;
+
+	int el_cnt = 0;
+	int cnt_left = 0;
+	int cnt_right = cnt;
+	for(int i = 0; i < (N - 1); i ++ ) {
+		if(stack == A[i]) {
+			cnt_left ++;
+			cnt_right --;
+		}
+		int left_limit = (i + 1) / 2;
+		int right_limit = (N - i - 1) / 2;
+		if((cnt_left > left_limit) && (cnt_right > right_limit)) {
+			//cout << "EL: " << i << endl;
+			el_cnt ++;
+		}
+
+	}
+
+	return el_cnt;
+}
+
+
+int solution_complex(vector<int> &A) {
+	if(A.empty())
+		return 0;
+	if(A.size() == 1)
+		return 0;
+
+	const int N = int(A.size());
 	vector<int> f(N);	// Forward leaders
 	vector<int> b(N);	// Bacward leaders
 	int stack = 0;
@@ -40,14 +94,6 @@ int solution(vector<int> &A) {
 		}
 	}
 
-	/*for(int i = 0; i < N; i ++) {
-	  if(f[i] != INT_MIN)
-	  cout << f[i] << " ";
-	  else
-	  cout << "X ";
-	  }
-	  cout << endl;*/
-
 	size = 0;
 	for(int i = (N - 1); i >= 0; i --) {
 		if(size == 0) {
@@ -68,51 +114,84 @@ int solution(vector<int> &A) {
 		}
 	}
 
-	/*for(int i = 0; i < N; i ++) {
-	  if(b[i] != INT_MIN)
-	  cout << b[i] << " ";
-	  else
-	  cout << "X ";
-	  }
-	  cout << endl;*/
-
 	int cnt = 0;
 	for(int i = 0; i < (N - 1); i ++) {
 		if((f[i] != INT_MIN) && (f[i] == b[i + 1])) {
 			//cout << "Equileader: " << f[i] << endl;
-			int limit = (i + 1) / 2;
+			int limit = 0;
 			int ec = 0;
 			bool flag = false;
-			int el = f[i];
-			for(int j = 0; j <= i; j ++) {
-				if(A[j] == el) {
-					ec ++;
-					if(ec > limit) {
-						flag = true;
-						break;
+			int el = 0;
+
+			if(i < (N / 2)) {
+				limit = (i + 1) / 2;
+				ec = 0;
+				flag = false;
+				el = f[i];
+				for(int j = 0; j <= i; j ++) {
+					if(A[j] == el) {
+						ec ++;
+						if(ec > limit) {
+							flag = true;
+							break;
+						}
 					}
 				}
-			}
 
-			if(!flag)
-				continue; // el is not an equileader
+				if(!flag)
+					continue; // el is not an equileader
 
-			limit = (N - i - 1) / 2;
-			ec = 0;
-			flag = false;
-			el = b[i + 1];
-			for(int j = (i + 1); j < N; j ++) {
-				if(A[j] == el) {
-					ec ++;
-					if(ec > limit) {
-						flag = true;
-						break;
+				limit = (N - i - 1) / 2;
+				ec = 0;
+				flag = false;
+				el = b[i + 1];
+				for(int j = (i + 1); j < N; j ++) {
+					if(A[j] == el) {
+						ec ++;
+						if(ec > limit) {
+							flag = true;
+							break;
+						}
 					}
 				}
-			}
 
-			if(!flag)
-				continue; // elb is not an equileader
+				if(!flag)
+					continue; // elb is not an equileader
+			} else {
+				limit = (N - i - 1) / 2;
+				ec = 0;
+				flag = false;
+				el = b[i + 1];
+				for(int j = (i + 1); j < N; j ++) {
+					if(A[j] == el) {
+						ec ++;
+						if(ec > limit) {
+							flag = true;
+							break;
+						}
+					}
+				}
+
+				if(!flag)
+					continue; // elb is not an equileader
+
+				limit = (i + 1) / 2;
+				ec = 0;
+				flag = false;
+				el = f[i];
+				for(int j = 0; j <= i; j ++) {
+					if(A[j] == el) {
+						ec ++;
+						if(ec > limit) {
+							flag = true;
+							break;
+						}
+					}
+				}
+
+				if(!flag)
+					continue; // el is not an equileader
+			}
 
 			cnt ++;
 		}
@@ -226,7 +305,8 @@ int main(void) {
 				A[i] = rand() % 5;
 			int r1 = solution(A);
 			int r2 = solution_bf(A);
-			if(r1 != r2) {
+			int r3 = solution_complex(A);
+			if((r1 != r2) || (r1 != r3)) {
 				cout << "ERROR_rnd at test " << test << endl;
 				for(int i = 0; i < N; i ++)
 					cout << A[i] << " ";
