@@ -2,7 +2,7 @@
 // EquiLeader
 // Find the index S such that the leaders of the sequences A[0], A[1], ..., A[S]
 // and A[S + 1], A[S + 2], ..., A[N - 1] are the same.
-// Test Score: 66% (Correctness 100%, Performance 25%)
+// Test Score: 100%
 #include <iostream>
 #include <vector>
 #include <climits>
