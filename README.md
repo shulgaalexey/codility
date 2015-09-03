@@ -1,13 +1,13 @@
 # codility
 
-Solutions of tasks from codility.com, implemented o C++
-=======================================================
+Solutions of tasks from codility.com, implemented on C++
+========================================================
 
 Task definitions:
 -----------------
 https://codility.com/programmers/lessons/
 
-Solved tesks
+Solved tasks
 ------------
  * Lesson 1 Time Complexity
   + TapeEquilibrium
@@ -59,7 +59,7 @@ TODO:
   + Peaks
   + Flags
   .
- * Lesson 9 Sieve of Erathosphenes
+ * Lesson 9 Sieve of Eratosthenes
  * Lesson 10 Euclidean algorithm
  * Lesson 11 Fibonacci numbers
  * Lesson 12 Binary search algorithm
