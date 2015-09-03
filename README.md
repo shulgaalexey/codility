@@ -1,10 +1,14 @@
 # codility
+
 Solutions of tasks from codility.com, implemented o C++
+=======================================================
 
 Task definitions:
+-----------------
 https://codility.com/programmers/lessons/
 
-Solved tesks:
+Solved tesks
+------------
  * Lesson 1 Time Complexity
   + TapeEquilibrium
   + PermMissingElem
@@ -50,6 +54,7 @@ Solved tesks:
  .
 
 TODO:
+-----
  * Lesson 8 Prime and Composite numbers
   + Peaks
   + Flags
