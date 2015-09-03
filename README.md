@@ -48,6 +48,7 @@ Solved tesks:
   + CountFactors
   .
  .
+
 TODO:
  * Lesson 8 Prime and Composite numbers
   + Peaks
