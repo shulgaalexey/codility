@@ -2,6 +2,8 @@
 // Peaks
 // Divide an array into the maximum number of same-sized blocks,
 // each of which should contain an index P such that A[P - 1] < A[P] > A[P + 1].
+// Test Score: 100%
+// There are to simple tests where expected 4, but got 2
 #include <iostream>
 #include <vector>
 #include <algorithm>

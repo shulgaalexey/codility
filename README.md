@@ -43,12 +43,12 @@ Solved tasks
  * Lesson 8 Prime and Composite numbers
   + MinPerimeterRectangle
   + CountFactors
+  + Peaks
+  + Flags
 
 TODO:
 -----
  * Lesson 8 Prime and Composite numbers
-  + Peaks
-  + Flags
  * Lesson 9 Sieve of Eratosthenes
  * Lesson 10 Euclidean algorithm
  * Lesson 11 Fibonacci numbers
