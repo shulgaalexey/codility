@@ -45,11 +45,11 @@ Solved tasks
   + CountFactors
   + Peaks
   + Flags
+ * Lesson 9 Sieve of Eratosthenes
+  + CountSemiprimes
 
 TODO:
 -----
- * Lesson 8 Prime and Composite numbers
- * Lesson 9 Sieve of Eratosthenes
  * Lesson 10 Euclidean algorithm
  * Lesson 11 Fibonacci numbers
  * Lesson 12 Binary search algorithm
