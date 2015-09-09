@@ -1,4 +1,4 @@
-# codility
+# codility solutions
 
 Solutions of tasks from codility.com, implemented on C++
 ========================================================
@@ -10,43 +10,46 @@ https://codility.com/programmers/lessons/
 Solved tasks
 ------------
  * Lesson 1 Time Complexity
-  + TapeEquilibrium
-  + PermMissingElem
+  + TapeEquilibrium: 100%
+  + PermMissingElem: 100%
   + FrogJmp
  * Lesson 2 Counting Elements
-  + FrogRiverOne
-  + PermCheck
-  + MissingInteger
-  + MaxCounters
+  + FrogRiverOne: 100%
+  + PermCheck: 100%
+  + MissingInteger: 100%
+  + MaxCounters: 100%
  * Lesson 3 Prefix Sums
-  + CountDiv
-  + PassingCars
-  + MinAvgTwoSlice
-  + GenomicRangeQuery
+  + CountDiv: 100%
+  + PassingCars: 100%
+  + MinAvgTwoSlice: 100%
+  + GenomicRangeQuery: 100%
  * Lesson 4 Sorting
-  + MaxProductOfThree
-  + Triangle
-  + NumberOfDiscIntersections
-  + Distinct
+  + MaxProductOfThree: 100%
+  + Triangle: 100%
+  + NumberOfDiscIntersections: 100%
+  + Distinct: 93% (87%/100%)
  * Lesson 5 Stacks and Queues
-  + Nesting
-  + StoneWall
-  + Brackets
-  + Fish
+  + Nesting: 100%
+  + StoneWall: 100%
+  + Brackets: 100%
+  + Fish: 100%
  * Lesson 6 Leader
-  + Dominator
-  + EquiLeader
+  + Dominator: 100%
+  + EquiLeader: 100%
  * Lesson 7 Maximum Slice Problem
-  + MaxDoubleSliceSum
-  + MaxProfit
-  + MaxSliceSum
+  + MaxDoubleSliceSum: 100%
+  + MaxProfit: 100%
+  + MaxSliceSum: 100%
  * Lesson 8 Prime and Composite numbers
-  + MinPerimeterRectangle
-  + CountFactors
+  + MinPerimeterRectangle: 100%
+  + CountFactors: 100%
   + Peaks
-  + Flags
+  + Flags: 93% (100%/85%)
  * Lesson 9 Sieve of Eratosthenes
-  + CountSemiprimes
+  + CountSemiprimes: 100%
+  + CountNonDivisible: 100%
+ * Lesson 10 Euclidean algorithm
+  + ChocolatesByNumbers: 100%
 
 TODO:
 -----
