@@ -54,6 +54,7 @@ Solved tasks
 TODO:
 -----
  * Lesson 10 Euclidean algorithm
+  + CommonPrimeDivisors
  * Lesson 11 Fibonacci numbers
  * Lesson 12 Binary search algorithm
  * Lesson 13 Caterpillar method
