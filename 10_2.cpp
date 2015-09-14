@@ -1,74 +1,60 @@
 // 10.2
 // CommonPrimeDivisors
 // Check whether two numbers have the same prime divisors.
+// Test Score: 100%
+// Solution taken on http://codesays.com/2014/solution-to-common-prime-divisors-by-codility/
 #include <iostream>
 #include <vector>
 using namespace std;
 
-int gcd(int a, int b) {
-	if((a % b) == 0)
-		return b;
+
+int gcd(int x, int y) {
+	// Compute the greatest common divisor
+	if((x % y) == 0)
+		return y;
 	else
-		return gcd(b, a % b);
+		return gcd(y, x % y);
 }
 
-int prime(int n) {
-	if(n == 1)
-		return true;
-	int i = 2;
-	while((i * i) <= n) {
-		if((n %i) == 0)
-			return false;
+bool hasSamePrimeDivisors(int x, int y) {
+	int gcd_value = gcd(x, y);  //  The gcd contains all the common prime divisors
+
+	while(x != 1) {
+		int x_gcd = gcd(x, gcd_value);
+		if(x_gcd == 1) {
+			// x does not contain any more common prime divisors
+			break;
+		}
+		x /= x_gcd;
 	}
-	return true;
+
+	if(x != 1) {
+		// If x and y have exactly the same common prime divisors, x must be composed by
+		// the prime divisors in gcd_value. So after previous loop, x must be one.
+		return false;
+	}
+
+	while(y != 1) {
+		int y_gcd = gcd(y, gcd_value);
+		if(y_gcd == 1) {
+			// y does not contain any more common prime divisors
+			break;
+		}
+		y /= y_gcd;
+	}
+
+	return (y == 1);
 }
 
 int solution(vector<int> &A, vector<int> &B) {
-	int cnt = 0;
+	int count = 0;
 	for(size_t i = 0; i < A.size(); i ++) {
-		if(A[i] == B[i]) {
-			cnt ++;
-			continue;
-		}
-
-		const int a = A[i];
-		const int b = B[i];
-		int n = gcd(a, b);
-		if(n == 1)
-			continue;
-
-		n = 2;
-
-		bool dif_divs = false;
-		while(true) {
-			if((n * n) > a)
-				break;
-			if((n * n) > b)
-				break;
-
-			if(!prime(n)) {
-				n ++;
-				continue;
-			}
-
-			bool a_prime_div = (a % n) == 0;
-			bool b_prime_div = (b % n) == 0;
-			if(a_prime_div == b_prime_div) {
-				n ++;
-				continue;
-			}
-
-			dif_divs = true;
-			break;
-		}
-
-		if(!dif_divs) {
-			//cout << "a = " << a << ", b = " << b << endl;
-			cnt ++;
-		}
+		if(hasSamePrimeDivisors(A[i],B[i]))
+			count += 1;
 	}
-	return cnt;
+	return count;
 }
+
 
 int main(void) {
 	{ // 1
@@ -79,7 +65,6 @@ int main(void) {
 		vector<int> B(b, b + sizeof(b) / sizeof(b[0]));
 
 		int r = solution(A, B);
-		cout << r << endl;
 		if(r != 1)
 			cout << "ERROR1" << endl;
 

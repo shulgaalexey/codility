@@ -50,11 +50,10 @@ Solved tasks
   + CountNonDivisible: 100%
  * Lesson 10 Euclidean algorithm
   + ChocolatesByNumbers: 100%
+  + CommonPrimeDivisors: 100%
 
 TODO:
 -----
- * Lesson 10 Euclidean algorithm
-  + CommonPrimeDivisors
  * Lesson 11 Fibonacci numbers
  * Lesson 12 Binary search algorithm
  * Lesson 13 Caterpillar method
