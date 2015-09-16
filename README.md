@@ -51,6 +51,8 @@ Solved tasks
  * Lesson 10 Euclidean algorithm
   + ChocolatesByNumbers: 100%
   + CommonPrimeDivisors: 100%
+ * Lesson 11 Fibonacci numbers
+  + Ladder: 100%
 
 TODO:
 -----
