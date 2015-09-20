@@ -53,10 +53,10 @@ Solved tasks
   + CommonPrimeDivisors: 100%
  * Lesson 11 Fibonacci numbers
   + Ladder: 100%
+  + FibFrog: 100%
 
 TODO:
 -----
- * Lesson 11 Fibonacci numbers
  * Lesson 12 Binary search algorithm
  * Lesson 13 Caterpillar method
  * Lesson 14 Greedy algorithms
