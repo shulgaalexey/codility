@@ -54,6 +54,8 @@ Solved tasks
  * Lesson 11 Fibonacci numbers
   + Ladder: 100%
   + FibFrog: 100%
+ * Lesson 12 Binary search algorithm
+  + MinMaxDivision: 100%
 
 TODO:
 -----
