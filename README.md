@@ -56,6 +56,7 @@ Solved tasks
   + FibFrog: 100%
  * Lesson 12 Binary search algorithm
   + MinMaxDivision: 100%
+  + NailingPlanks: 100%
 
 TODO:
 -----
