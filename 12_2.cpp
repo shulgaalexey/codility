@@ -107,6 +107,7 @@ int main(void) {
 		int r2 = solution2(A, B, C);
 		cout << r << endl;
 		cout << r2 << endl;
+		cout << r << endl;
 		if(r != 4)
 			cout << "ERROR1" << endl;
 	}
@@ -136,6 +137,7 @@ int main(void) {
 		int r2 = solution2(A, B, C);
 		cout << r << endl;
 		cout << r2 << endl;
+		cout << r << endl;
 		if(r != 8)
 			cout << "ERROR2" << endl;
 	}
