@@ -57,10 +57,11 @@ Solved tasks
  * Lesson 12 Binary search algorithm
   + MinMaxDivision: 100%
   + NailingPlanks: 100%
+ * Lesson 13 Caterpillar method
+  + AbsDistinct
 
 TODO:
 -----
- * Lesson 12 Binary search algorithm
  * Lesson 13 Caterpillar method
  * Lesson 14 Greedy algorithms
  * Lesson 15 Dynamic Programming
