@@ -58,7 +58,8 @@ Solved tasks
   + MinMaxDivision: 100%
   + NailingPlanks: 100%
  * Lesson 13 Caterpillar method
-  + AbsDistinct
+  + AbsDistinct: 100%
+  + CountDistinctSlices: 100%
 
 TODO:
 -----
