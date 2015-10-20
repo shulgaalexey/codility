@@ -1,4 +1,7 @@
 //13.3
+//CountTriangles
+//Count the number of triangles that can be built from a given set of edges.
+// Test Score: 100%
 #include <iostream>
 #include <vector>
 #include <algorithm>

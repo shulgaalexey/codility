@@ -60,9 +60,12 @@ Solved tasks
  * Lesson 13 Caterpillar method
   + AbsDistinct: 100%
   + CountDistinctSlices: 100%
+  + CountTriangles: 100%
+  + MinAbsSumOfTwo: 100%
+ * Lesson 14 Greedy algorithms
+  + MaxNonoverlappingSegments: 100%
 
 TODO:
 -----
- * Lesson 13 Caterpillar method
  * Lesson 14 Greedy algorithms
  * Lesson 15 Dynamic Programming

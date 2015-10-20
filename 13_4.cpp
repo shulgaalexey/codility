@@ -1,4 +1,7 @@
 //13.4
+//MinAbsSumOfTwo
+//Find the minimal absolute value of a sum of two elements.
+// Test Score: 100%
 #include <iostream>
 #include <vector>
 #include <algorithm>
