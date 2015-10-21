@@ -64,8 +64,8 @@ Solved tasks
   + MinAbsSumOfTwo: 100%
  * Lesson 14 Greedy algorithms
   + MaxNonoverlappingSegments: 100%
+  + TieRopes: 100%
 
 TODO:
 -----
- * Lesson 14 Greedy algorithms
  * Lesson 15 Dynamic Programming

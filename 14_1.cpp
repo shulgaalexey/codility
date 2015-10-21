@@ -1,6 +1,7 @@
 // 14.1
 // MaxNonoverlappingSegments
 // Find a maximal set of non-overlapping segments.
+// Test Score: 100%
 #include <iostream>
 #include <vector>
 #include <stdlib.h>
