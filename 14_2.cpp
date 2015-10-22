@@ -1,6 +1,7 @@
 //14.2
 //TieRopes
 //Tie adjacent ropes to achieve the maximum number of ropes of length >= K.
+// Test Score: 100%
 #include <iostream>
 #include <vector>
 using namespace std;

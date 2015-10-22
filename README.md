@@ -65,6 +65,8 @@ Solved tasks
  * Lesson 14 Greedy algorithms
   + MaxNonoverlappingSegments: 100%
   + TieRopes: 100%
+ * Lesson 15 Dynamic Programming
+  + NumberSolitaire: 100%
 
 TODO:
 -----
