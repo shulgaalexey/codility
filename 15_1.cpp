@@ -7,6 +7,7 @@
 #include <vector>
 #include <map>
 #include <climits>
+
 using namespace std;
 
 int solution(vector<int> &A) {

@@ -68,6 +68,7 @@ Solved tasks
  * Lesson 15 Dynamic Programming
   + NumberSolitaire: 100%
 
+
 TODO:
 -----
  * Lesson 15 Dynamic Programming
