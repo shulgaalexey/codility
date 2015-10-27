@@ -67,8 +67,6 @@ Solved tasks
   + TieRopes: 100%
  * Lesson 15 Dynamic Programming
   + NumberSolitaire: 100%
+  + MinAbsSum: 72%
 
 
-TODO:
------
- * Lesson 15 Dynamic Programming
