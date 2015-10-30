@@ -1,7 +1,7 @@
 // 15.2
 // MinAbsSum
 // Given array of integers, find the lowest absolute sum of elements.
-// Test Score: 72% (Correctness 100%, Performance 40%)
+// Test Score: 100% (Applied official Codility solution)
 #include <iostream>
 #include <vector>
 #include <map>
@@ -10,6 +10,54 @@
 using namespace std;
 
 int solution(vector<int> &A) {
+	const int N = int(A.size());
+
+	int M = 0;
+	int S = 0;
+	for(int i = 0; i < N; i ++) {
+		/* Make all values positive (absolute) */
+		if(A[i] < 0)
+			A[i] *= -1;
+
+		/* Find the maximum value in the array */
+		if(A[i] > M)
+			M = A[i];
+
+		/* Find the sum of the array */
+		S += A[i];
+	}
+
+	/* Find the values distribution */
+	vector<int> count(M + 1, 0);
+	for(int i = 0; i < N; i ++) {
+		count[A[i]] += 1;
+	}
+
+	/* Array of achievable sums */
+	vector<int> dp(S + 1, -1);
+	dp[0] = 0;
+
+	/* Golden solution */
+	for(int a = 1; a <= M; a ++) {
+		if(count[a] <= 0)
+			continue;
+		for(int j = 0; j <= S; j ++) {
+			if(dp[j] >= 0) {
+				dp[j] = count[a];
+			} else if((j >= a) && (dp[j - a] > 0)) {
+				dp[j] = dp[j - a] - 1;
+			}
+		}
+	}
+
+	int result = S;
+	for(int i = 0; i < (S / 2 + 1); i ++)
+		if(dp[i] >= 0)
+			result = min(result, S - 2 * i);
+	return result;
+}
+
+int solution3(vector<int> &A) {
 	if(A.empty())
 		return 0;
 	map<int, int> m1;
@@ -39,47 +87,6 @@ int solution(vector<int> &A) {
 			min_sum = abs(it->second);
 	}
 
-	return min_sum;
-}
-
-int solution3(vector<int> &A) {
-	int abs_sum = 0;
-	for(size_t i = 0; i < A.size(); i ++)
-		abs_sum += abs(A[i]);
-
-	vector<int> buf(2 * abs_sum + 1, 0);
-	const size_t zero_idx = abs_sum;
-	buf[A[0] + zero_idx] = 1;
-	buf[-A[0] + zero_idx] = 1;
-	for(size_t i = 1; i < A.size(); i ++) {
-		vector<int> buf_tmp = buf;
-		buf.assign(2 * abs_sum + 1, 0);
-		for(size_t j = 0; j < buf_tmp.size(); j ++) {
-			if(buf_tmp[j] == 1) {
-				int prev_tmp_sum = j - zero_idx;
-				int new_tmp_sum_pos = prev_tmp_sum + A[i];
-				int new_tmp_sum_neg = prev_tmp_sum - A[i];
-				buf_tmp[new_tmp_sum_pos + zero_idx] = 1;
-				buf_tmp[new_tmp_sum_neg + zero_idx] = 1;
-			}
-		}
-		buf = buf_tmp;
-	}
-
-	if(buf[zero_idx] == 1)
-		return 0;
-
-	int min_sum = INT_MAX;
-	for(int i = 0; i < abs_sum; i ++) {
-		if(buf[zero_idx + i ] == 1) {
-			min_sum = i;
-			break;
-		}
-		if(buf[zero_idx - i] == 1) {
-			min_sum = i;
-			break;
-		}
-	}
 	return min_sum;
 }
 
