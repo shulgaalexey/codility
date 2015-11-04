@@ -7,7 +7,7 @@ Task definitions:
 -----------------
 https://codility.com/programmers/lessons/
 
-Solved tasks
+Solved ALL Tasks
 ------------
  * Lesson 1 Time Complexity
   + TapeEquilibrium: 100%
@@ -67,6 +67,6 @@ Solved tasks
   + TieRopes: 100%
  * Lesson 15 Dynamic Programming
   + NumberSolitaire: 100%
-  + MinAbsSum: 72%
+  + MinAbsSum: 100%
 
 
